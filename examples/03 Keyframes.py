@@ -10,7 +10,7 @@ for i, shot_data in enumerate(shots):
     print(f"Treating shot {i + 1}/{len(shots)}")
     
     if shot_data[1] - shot_data[0] > 0:
-        keyframer = jhva.Keyframer(vid)
+        keyframer = jhva.Keyframer(vid, frame_jump = 10)
         
         out_path =  os.path.join(out_dest, f"keyframe_shot_{i}", "keyframe")
         if os.path.isdir(os.path.join(out_dest, f"keyframe_shot_{i}")) == False:
